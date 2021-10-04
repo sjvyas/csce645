@@ -1,7 +1,6 @@
-layout: default
+<!-- layout: default
 title: "Project Proposal"
-permalink: /csce645/proposal/
-
+permalink: /csce645/proposal/ -->
 # Simplification of Semantically Segmented Images for Multi-Level of Detail Representation
 ---
 
