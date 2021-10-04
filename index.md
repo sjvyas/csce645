@@ -1,6 +1,6 @@
 ## CSCE 645/ VIZA 675 - Geometric Modeling
 
-
+### Simplification of Semantically Segmented Images for Multi-level of Detail Representation
 
 You can use the [editor on GitHub](https://github.com/sjvyas/csce645/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
