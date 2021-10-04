@@ -1,13 +1,13 @@
 ---
-layout: page
-title: Project Proposal
+layout: default
+title: "Project Proposal"
 permalink: /csce645/proposal/
 ---
 
 # Simplification of Semantically Segmented Images for Multi-Level of Detail Representation
----
+
 ## by Shantanu Vyas
----
+
 ### Summary Requirements
 - Description of Problem:
 ```
