@@ -3,6 +3,9 @@
 ### Simplification of Semantically Segmented Images for Multi-level of Detail Representation
 
 Need to add a new pages
+
+[Link to Project Proposal](https://sjvyas.github.io/csce645/proposal/)
+
 You can use the [editor on GitHub](https://github.com/sjvyas/csce645/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
