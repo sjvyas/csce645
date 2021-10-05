@@ -1,4 +1,4 @@
-itle: Literatre Review
+title: Literatre Review
 layout: default
 permalink: /csce645/proposal/literature-review
 
