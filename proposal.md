@@ -12,4 +12,4 @@ The problem of multi-level of detail representation of the objects can be mitiga
 
 Currently, my proposed approach to this problem is to combine the techniques of skeletonization of objects (shapes) present in the segmented images, simplifying the skeletons using different skeleton pruning techniques and then reconstructing the segmented shapes by generating voronoi diagrams, using pruned skeleton points as the voronoi cites. Multi-level of detail aspect of the problem can be observed in a variety of different ways: resampling reduced number of points along the skeletal representation of the images, different levels of pruning of the skeletons.
 
-[Link to Literature Review](https://sjvyas.github.io/csce645/proposal/literature-review)
+[Link to Literature Review](https://sjvyas.github.io/csce645/literature-review)
