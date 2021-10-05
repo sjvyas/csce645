@@ -7,3 +7,5 @@
 ---
 
 ## [Please click here for the Literature Review](https://sjvyas.github.io/csce645/literature-review)
+
+---
