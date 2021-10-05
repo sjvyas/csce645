@@ -27,7 +27,7 @@ The general improvements in the skeletonization algorithms have enabled the crea
 
 The work that will be done in this project will certainly be influenced by a lot of the works discussed above, specifically the methods that enable shape smoothing through skeleton pruning. That being said, most methods introduced here focus on smoothing boundaries and generating skeletons for a single class of objects or shapes, and do not discuss much about the presence and influence of multiple classes of shapes within the image. The work in this project will try to fill the knowledge gap of implementing modified versions of these techniques to multi-class semantically segmented images. While the skeleton generation might be done on an individual class based method, techniques such as pruning and smoothing of the shapes will be attempted on a multi-class basis.
 
-
+[Link to Home Page](https://sjvyas.github.io/csce645/)
 
 ### References
 [1] Garcia, J. A., and J. Fdez-Valdivia. "Boundary simplification in cartography preserving the characteristics of the shape features." _Computers & Geosciences_ 20.3 (1994): 349-368.
