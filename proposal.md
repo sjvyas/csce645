@@ -39,5 +39,6 @@ NOTE: My GAR work focuses on developing 3D geometric scenes of natural environme
 [4] Jiang, Peng, et al. "Rellis-3d dataset: Data, benchmarks and analysis." _arXiv preprint arXiv:2011.12954_ (2020).
 
 [Link to Literature Review](https://sjvyas.github.io/csce645/literature-review)
+
 [Link to Home Page](https://sjvyas.github.io/csce645/)
 
