@@ -1,5 +1,4 @@
-## CSCE 645/ VIZA 675 - Geometric Modeling
+# Simplification of Semantically Segmented Images for Multi-level of Detail Representation
 
-### Simplification of Semantically Segmented Images for Multi-level of Detail Representation
-
-[Link to Project Proposal](https://sjvyas.github.io/csce645/proposal)
+[Please click here for the Project Proposal](https://sjvyas.github.io/csce645/proposal)
+[Please click here for the Literature Review](https://sjvyas.github.io/csce645/literature-review)
