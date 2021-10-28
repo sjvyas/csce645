@@ -9,3 +9,5 @@
 ## [Please click here for the Literature Review](https://sjvyas.github.io/csce645/literature-review)
 
 ---
+
+## [Please click here for the Project Update 1](https://sjvyas.github.io/csce645/update-1)
