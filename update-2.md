@@ -43,4 +43,20 @@ My first step was to implement the boundary tracing algorithm. While quite a few
       end While
     End
 
+This algorithm worked great for finding just one object within a class (i.e., one human from a group of humans) but was quite slow to find the other objects. To speed up the process, I used the opencv find contours function to get the starting pixel of each of the objects present in the image. This way, the topology of the shapes were also preserved, as previously, holes within the shapes were not detected. An example of the output of the boundary extraction algorithm is show in Figure 2.
+
+My next task was to explore skeleton pruning in order to simplify the skeleton obtained from the voronoi diagram constructed over the boundary points. Currently, I am taking individual objects and their skeletons, rather than pursuing all the objects in the image at once. The method I am following is as follows:
+- Identify and remove the boundary edges, i.e. the edges that surround the shape. This will result in a skeletal representation of the shape that aren't bounded by edges.
+- Next, I identify the valency of the vertices, i.e., find the number of edges attached to a given vertex. This step also helps me identify the edges that are connected to these edges.
+- Vertices with valency 1 are the leaf nodes, i.e., vertices connected to only one edge, which occurs at the outermost branches of the skeletal representation.
+- By iteratively removing edges containing the valency 1 vertices, I was able to get a simplified version of the object's skeleton. 
+- The result of these steps can better be seen in Figure 3.
+
+To check the effect of the skeleton simplification on the shapes of the segmented images, I constructed voronoi diagrams taking the vertices on the spruned skeletons of the individual objects as the voronoi sites. The results can be seen in Figure 4.
+
+The issues that I am currently facing is that, some shapes are over-exaggerated in certain directions. For instance the human's head is getting greatly extended into the sky region as there is a lack of skeleton branches in the sky object that can prevent the extension. As such, I will have to carefully think of solutions to tackle this problem in a way that simplifies the image but also prevents over-exaggeration of shapes. 
+
+Apart from this, my next goal will be to test out some other skeleton pruning techniques that can better capture the shape representation. I would also like to test out different meshing techniques withing these shapes to see how a simplified boundary can result in simplified meshes.
+
+
 [Link to Home Page](https://sjvyas.github.io/csce645/)
