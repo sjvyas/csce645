@@ -16,4 +16,4 @@ In regards to the overall progress, I have been able to accomplish the first pri
 
 In terms of the remaining goals, I plan to continue on the path set out previously, with skeleton pruning being the next goal as mentioned in the previous paragraph. I would also like to implement the boundary tracing algorithm on python using inspiration from the MATLAB function. The aim would also be to simultaneously find the boundaries of all the classes and also the disjointed objects in the individual classes in one go. However, I am not sure if that will be possible for a multi-class RGB image.
 
-
+[Link to Home Page](https://sjvyas.github.io/csce645/)
