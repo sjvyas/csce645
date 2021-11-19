@@ -9,7 +9,7 @@ permalink: /csce645/update-2
 My main goals for this update were as follows:
 - Implement a boundary tracing algorithm that works similarly to the boundary tracing algorithm in [MATLAB](https://www.mathworks.com/help/images/ref/bwboundaries.html)
 - Explore skeleton pruning technique to improve the skeletal representation of the different objects present in the image.
-- Preliminary exploration of reconstructing segmented images using the simplified skeleton.
+- Preliminary exploration of reconstructing segmented images using the simplified skeleton. 
  
 My first step was to implement the boundary tracing algorithm. While quite a few boundary extraction functions exist in popular python libraries, such as [OpenCV](https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html) and [scikit-image](https://scikit-image.org/docs/dev/auto_examples/edges/plot_contours.html), they returned incomplete contours/boundaries (Figure 1). As such I implemented the Moore's neighborhood tracing algorithm, similar to the MATLAB function. Specifically I followed the following algorithm borrowed from [Wikipedia](https://en.wikipedia.org/wiki/Moore_neighborhood): 
 
