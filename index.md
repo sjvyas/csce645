@@ -11,3 +11,7 @@
 ---
 
 ## [Please click here for the Project Update 1](https://sjvyas.github.io/csce645/update-1)
+
+---
+
+## [Please click here for the Project Update 2](https://sjvyas.github.io/csce645/update-2)
