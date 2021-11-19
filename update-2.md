@@ -14,14 +14,14 @@ My main goals for this update were as follows:
 My first step was to implement the boundary tracing algorithm. While quite a few boundary extraction functions exist in popular python libraries, such as [OpenCV](https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html) and [scikit-image](https://scikit-image.org/docs/dev/auto_examples/edges/plot_contours.html), they returned incomplete contours/boundaries (Figure 1). As such I implemented the Moore's neighborhood tracing algorithm, similar to the MATLAB function. Specifically I followed the following algorithm borrowed from [Wikipedia](https://en.wikipedia.org/wiki/Moore_neighborhood): 
 
 ```
-**Input**: A square tessellation, T, containing a connected component P of black cells.
-**Output**: A sequence B (b1, b2, ..., bk) of boundary pixels i.e. the contour.
+_Input_: A square tessellation, T, containing a connected component P of black cells.
+_Output_: A sequence B (b1, b2, ..., bk) of boundary pixels i.e. the contour.
 Define M(a) to be the Moore neighborhood of pixel a.
 Let p denote the current boundary pixel.
 Let c denote the current pixel under consideration i.e. c is in M(p).
 Let b denote the backtrack of c (i.e. neighbor pixel of p that was previously tested)
  
-**Begin**
+_Begin_
   **Set** B **to** be empty.
   **From** bottom **to** top **and** left **to** right scan the cells of T **until** a black pixel, s, of P is found.
   Insert s in B.
