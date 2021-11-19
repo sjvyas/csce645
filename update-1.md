@@ -1,4 +1,4 @@
-title: Literatre Review
+title: Update 1
 layout: default
 permalink: /csce645/update-1
 
