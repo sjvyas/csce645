@@ -1,6 +1,6 @@
-title: Update 1
+<!-- title: Update 1
 layout: default
-permalink: /csce645/update-1
+permalink: /csce645/update-1 -->
 
 ## Project Update 1
 ---
