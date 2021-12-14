@@ -1,7 +1,6 @@
 <!-- title: Update 1
 layout: default
 permalink: /csce645/update-1 -->
-
 ## Project Update 1
 ---
 The goal for the first few weeks of my project was to setup the initial pipeline required for smoothing the boundaries in segmented images. This involved researching and developing code to carry out the image processing steps and then testing out simple skeleton construction techniques. I used MATLAB and Python to carry out these initial tasks, but I plan on having the entire pipeline working on Python alone. 
