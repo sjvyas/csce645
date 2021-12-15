@@ -44,10 +44,10 @@ I will now explain the above steps in detail.
 ***Boundary Extraction***
 
 
-![fig01](/assets/images/missing_contour.png) *Figure. Missing boundary pixels using the OpenCV find_contours function.*
+![fig010](/assets/images/missing_contour.png) *Figure. Missing boundary pixels using the OpenCV find_contours function.*
 
 
-![fig01](/assets/images/boundary_extraction1.png) *Figure Boundary extraction using Moore's Neighborhood approach*
+![fig001](/assets/images/boundary_extraction1.png) *Figure Boundary extraction using Moore's Neighborhood approach*
 
 Boundaries are essential to describe the shape of 2D objects. While a number of techniques exist for boundary extraction from images, the challenge in my case was to accurately obtain individual boundaries of each object such that the extracted boundary could accurately represent the shape of the objects. While quite a few boundary extraction functions exist in popular python libraries, such as [OpenCV](https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html) and [scikit-image](https://scikit-image.org/docs/dev/auto_examples/edges/plot_contours.html), they returned incomplete contours/boundaries. As a result, I implemented the Moore's neighborhood tracing algorithm. Specifically I tweaked the algorithm borrowed from [Wikipedia](https://en.wikipedia.org/wiki/Moore_neighborhood) to extract boundaries of all objects along with their class labels in one go. An example of the output of the boundary extraction algorithm is show above. The extracted boundaries were also represented as x-y coordinates for ease of work at later stages of the project.
 
@@ -58,7 +58,7 @@ Skeletal representations are an important way of representing the shape interior
 I used the Voronoi-based approach to generate the skeletons of the objects. A 2D Voronoi diagram partitions a plane into regions called Voronoi cells. When constructed using the boundary points of a shape as the Voronoi sites, the edges of the cells lying within the shape can be closely approximated to the skeleton of the shape. I used the boundary points of all the objects within the image as voronoi sites and constructed the voronoi diagram. This gave me an extremely dense skeleton structure for each object due to the large number of boundary points corresponding to their shape (FIGURE).
 
 ***Skeleton Pruning to Obtain Approximate Medial Axis***
-
+![fig01](/assets/images/movie.gif) *Figure. Skeleton Pruning on the Puddle object*
 The next step was to prune the skeleton structures of the individual objects in order to simplify the skeleton and obtain the Medial Axis of the different shapes. This was one of the more important steps of the process since the concept of Multi-Level of Detail Representation could be explored as a way of simplifying the skeleton structure of different classes of objects to different degrees. 
 
 These were the steps I followed to prune the skeleton:
