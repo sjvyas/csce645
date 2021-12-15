@@ -43,7 +43,13 @@ I will now explain the above steps in detail.
 
 ***Boundary Extraction***
 
-Boundaries are essential to describe the shape of 2D objects. While a number of techniques exist for boundary extraction from images, the challenge in my case was to accurately obtain individual boundaries of each object such that the extracted boundary could accurately represent the shape of the objects. While quite a few boundary extraction functions exist in popular python libraries, such as [OpenCV](https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html) and [scikit-image](https://scikit-image.org/docs/dev/auto_examples/edges/plot_contours.html), they returned incomplete contours/boundaries (FIGURE 1). As a result, I implemented the Moore's neighborhood tracing algorithm. Specifically I tweaked the algorithm borrowed from [Wikipedia](https://en.wikipedia.org/wiki/Moore_neighborhood) to extract boundaries of all objects along with their class labels in one go. An example of the output of the boundary extraction algorithm is show in Figure 2. The extracted boundaries were also represented as x-y coordinates for ease of work at later stages of the project.
+
+![fig01](/assets/images/missing_contour.png) *Figure. Missing boundary pixels using the OpenCV find_contours function.*
+
+
+![fig01](/assets/images/missing_contour.png) *Figure Boundary extraction using Moore's Neighborhood approach*
+
+Boundaries are essential to describe the shape of 2D objects. While a number of techniques exist for boundary extraction from images, the challenge in my case was to accurately obtain individual boundaries of each object such that the extracted boundary could accurately represent the shape of the objects. While quite a few boundary extraction functions exist in popular python libraries, such as [OpenCV](https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html) and [scikit-image](https://scikit-image.org/docs/dev/auto_examples/edges/plot_contours.html), they returned incomplete contours/boundaries. As a result, I implemented the Moore's neighborhood tracing algorithm. Specifically I tweaked the algorithm borrowed from [Wikipedia](https://en.wikipedia.org/wiki/Moore_neighborhood) to extract boundaries of all objects along with their class labels in one go. An example of the output of the boundary extraction algorithm is show above. The extracted boundaries were also represented as x-y coordinates for ease of work at later stages of the project.
 
 ***Skeletonization***
 
