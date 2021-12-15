@@ -106,8 +106,11 @@ There are a few more examples shown below that are the result of different exper
 
 ### Analysis
 
+Overall, while my proposed approach can reduce shape complexity for certain classes of objects, it does have quite a few limitations that lead to topological changes of the shape which can be undesirable for cases where the topological features are crucial to the shape of the object. For instance, in the image below, the approach does not respect the holes within the barricades. The reason for this is that the skeleton pruning approach essentially removes spurious branches and may also disconnect the medial axis around the holes, due to the nature of the pruning techniques. This break in the medial axis while the hole retaining its medial axis causes the reconstructed shape to disregard the original topology of the shapes.
+
 ![AN01_00](/assets/images/analysis_011.png)
-<!-- The proposed approach is  -->
+
+Another observation that was made was that thinner objects whose medial axis remained intact due to the variable threshold for smaller objects, were more exaggerated after reconstruction. This was especially true when their neighboring interface was a large object, whose pruned skeleton/medial axis was fairly well pruned and did not have edges to counter the medial axis of the thin objects. As a result, the voronoi cells formed on the skeleton points of the thinner objects are larger than their original shape. This is bound to happen in a medial axis based shape representation and the use of boundary points or the use of heurestics to remove thin objects of less importance can be one alternative that could produce better results.  
 
 ### Conclusion and Future Work
 To conclude, my proposed approach was able to perform well for certain types of images that contained sharp protrusions. I was able to provide a way to preserve the shapes of classes of objects, however, the current implementation may result in a more perturbed boundary for the preserved class. One potential direction of expanding this work is to find a way of keeping the boundary of the preserved class intact while also respect the skeletons of the neighboring objects. While adding the boundary is simple, re-computing the specific skeleton regions is a difficult task. As mentioned above, the current approach also doesn't perform well when there are multiple holes in a class of objects. This needs to be researched more.
