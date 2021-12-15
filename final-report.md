@@ -87,6 +87,9 @@ The other challenges I faced was to set an appropriate threshold at which to sto
 ### Results
 
 ![FR01_00](/assets/images/final_result_1.png)
+![FR02_00](/assets/images/shape_preserve.png)
+![FR04_00](/assets/images/more_examples.png)
+
 
 <!-- ### Analysis -->
 <!-- The proposed approach is  -->
