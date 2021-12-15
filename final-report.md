@@ -87,9 +87,20 @@ The other challenges I faced was to set an appropriate threshold at which to sto
 ### Results
 ![FR01_00](/assets/images/final_result_1.png)
 I conducted a variety of experiments on images obtained from the RELLIS-3D dataset. The first few experiments were focused on simply reconstructing the shapes using the pruned skeletons. The results are shown in the first row of the image. It can be seen that the head of the human extends more towards the sky and the shape of the fences have thickened. As the representations of these objects needs to be more precise due to their ability of obstructing a vehicle, we need to preserve the shapes of the objects using their original skeleton edges as well as the skeleton edges that surround their boundaries. This enables a multi-level of detail shape representation from the image. The second row in the above image corresponds to the experiments where only the shape of the person is preserved. The image below highlights the pruned skeleton when preserving the shape of the person.
+
 ![FR02_00](/assets/images/preserved_skel.png)
 
+The multi-level of detail approach can be used for multiple classes as well. The image shown below shows the results while preserving the person and fence class.
+
 ![FR02_00](/assets/images/shape_preserve.png)
+
+Another experiment I conducted to simplify the boundaries further was to resample the two valency skeleton points. Edges containing the two valency points are typically the filler edges connecting higher order valencies or between a lower order and higher order valencies. Unless these edges are long, combining two edges by dropping the shared two valency points will help simplify the shape by reducing the number of voronoi sites and in an ideal scenario, preserve the topology of the shapes. However, as can be seen below, 
+resampling 1/10th and 1/20th of the two valency points, does indeed change the topology of the shapes and might not be desirable, however, it does help reduce the overall complexity of the shapes and massively reduces the bounday edges of the final shape. (20k+ boundary edges from original voronoi diagram, to <200 boundary edges for the final voronoi diagram.)
+
+![FR04_00](/assets/images/resampled.png)
+
+There are a few more examples shown below that are the result of different experiments I conducted on other images.
+
 ![FR04_00](/assets/images/more_examples.png)
 
 
