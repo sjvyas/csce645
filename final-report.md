@@ -93,7 +93,7 @@ The other challenges I faced was to set an appropriate threshold at which to sto
 
 ### Analysis
 
-![AN01_00](/assets/images/analysis_01.png)
+![AN01_00](/assets/images/analysis_011.png)
 <!-- The proposed approach is  -->
 
 ### Conclusion and Future Work
