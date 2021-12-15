@@ -16,7 +16,7 @@ The methodology I followed in this project was specifically tailored to high-dim
 - First, I obtained the boundary pixels of individual objects/shapes within the segmented images. The boundary pixels were transformed to x-y coordinates, thus, allowing me to work in the object space from the image space.
 - In order to obtain the skeletal representation of the objects, and eventually the Medial Axis, I used Voronoi Diagrams, which are known to produce good approximations of the Medial Axis, using the boundary coordinates of the objects as Voronoi sites.
 - Due to a high number of boundary points, the skeletal representation of each object was dense with branches as it captured all the boundary noise. In order to get rid of the noise induced brances, and obtain a fairly simple Medial Axis, I implemented a skeleton pruning technique.
-- The pruning was done on a rule-based approach, depending on the size and/or class of the object.
+- The pruning was done on a rule-based approach, depending on the size and/or class of the object. This accounted for the Multi-Level of Detail Representation of objects within the scene.
 - Finally, to reconstruct the shapes (objects) from the pruned skeleton of the objects, I used the skeleton points as Voronoi sites and constructed the Voronoi Diagram respecting the semantic labeling of the individual objects.
 
 I will now explain the above steps in detail.
@@ -27,8 +27,28 @@ Boundaries are essential to describe the shape of 2D objects. While a number of 
 
 ***Skeletonization***
 
-Skeletal representations are important shape descriptors.
+Skeletal representations are an important way of representing the shape interiors. Along with the boundary, they can be used to describe the interior and exterior of the shapes. Therefore, to simplify an object's shape, computing its skeleton becomes an important step in my process. 
 
+I used the Voronoi-based approach to generate the skeletons of the objects. A 2D Voronoi diagram partitions a plane into regions called Voronoi cells. When constructed using the boundary points of a shape as the Voronoi sites, the edges of the cells lying within the shape can be closely approximated to the skeleton of the shape. I used the boundary points of all the objects within the image as voronoi sites and constructed the voronoi diagram. This gave me an extremely dense skeleton structure for each object due to the large number of boundary points corresponding to their shape (FIGURE).
 
+***Skeleton Pruning to Obtain Approximate Medial Axis***
+
+The next step was to prune the skeleton structures of the individual objects in order to simplify the skeleton and obtain the Medial Axis of the different shapes. This was one of the more important steps of the process since the concept of Multi-Level of Detail Representation could be explored as a way of simplifying the skeleton structure of different classes of objects to different degrees.
+
+***Shape Reconstruction and Resegmentation***
+
+Once the pruned skeleton points and their corresponding class labels of the objects were obtained from the previous step, the last step of the process was to reconstruct the simplified object shapes. Using the skeleton points as voronoi sites, I constructed a Voronoi diagram, where each cell was colored using the sites' class labels. The advantage of using Voronoi diagrams to reconstruct the shapes is its' space-filling property. As a result there were no void gaps between objects, and for the most part, the boundary relations between the objects were similar to the original image, thus the image was, in some sense resegmented.
+
+***Challenges and Failures***
+
+Apart from the nature of the results, the major challenges I faced was in developing an algorithm to compute the Voronoi diagrams. My approach was to use the [Bowyer-Watson](https://en.wikipedia.org/wiki/Bowyer%E2%80%93Watson_algorithm) algorithm to compute the Delaunay Triangulation, and then compute the Voronoi diagrams which is its dual graph. Unfortunately I was running into many issues caused by degenerate cases and due to the high number of data points that I was using. As a result, I resorted to using the [function in the scipy library](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.Voronoi.html) to compute the Voronoi diagrams. 
+
+The other challenges I faced was to set an appropriate threshold at which to stop the skeleton pruning process for the different objects. As every object had a widely different boundary points, keeping a single low threshold resulted in the disappearance of features for most small objects. Whereas keeping a threshold to allow for more number of skeleton edges resulted in the larger objects having spurious branches. I settled for a size-based approach where the threshold was set depending on the size of the boundary points.
+
+### Results
+
+### Analysis
+
+### Conclusion and Future Work
 
 [Link to Home Page](https://sjvyas.github.io/csce645/)
