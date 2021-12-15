@@ -91,7 +91,9 @@ The other challenges I faced was to set an appropriate threshold at which to sto
 ![FR04_00](/assets/images/more_examples.png)
 
 
-<!-- ### Analysis -->
+### Analysis
+
+![AN01_00](/assets/images/analysis_01.png)
 <!-- The proposed approach is  -->
 
 ### Conclusion and Future Work
