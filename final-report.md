@@ -85,8 +85,10 @@ Apart from the nature of the results, the major challenges I faced was in develo
 The other challenges I faced was to set an appropriate threshold at which to stop the skeleton pruning process for the different objects. As every object had a widely different boundary points, keeping a single low threshold resulted in the disappearance of features for most small objects. Whereas keeping a threshold to allow for more number of skeleton edges resulted in the larger objects having spurious branches. I settled for a size-based approach where the threshold was set depending on the size of the boundary points.
 
 ### Results
-
 ![FR01_00](/assets/images/final_result_1.png)
+I conducted a variety of experiments on images obtained from the RELLIS-3D dataset. The first few experiments were focused on simply reconstructing the shapes using the pruned skeletons. The results are shown in the first row of the image. It can be seen that the head of the human extends more towards the sky and the shape of the fences have thickened. As the representations of these objects needs to be more precise due to their ability of obstructing a vehicle, we need to preserve the shapes of the objects using their original skeleton edges as well as the skeleton edges that surround their boundaries. This enables a multi-level of detail shape representation from the image. The second row in the above image corresponds to the experiments where only the shape of the person is preserved. The image below highlights the pruned skeleton when preserving the shape of the person.
+![FR02_00](/assets/images/preserved_skel.png)
+
 ![FR02_00](/assets/images/shape_preserve.png)
 ![FR04_00](/assets/images/more_examples.png)
 
