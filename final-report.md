@@ -88,8 +88,8 @@ The other challenges I faced was to set an appropriate threshold at which to sto
 
 ![FR01_00](/assets/images/final_result_1.png)
 
-### Analysis
-The proposed approach is 
+<!-- ### Analysis -->
+<!-- The proposed approach is  -->
 
 ### Conclusion and Future Work
 To conclude, my proposed approach was able to perform well for certain types of images that contained sharp protrusions. I was able to provide a way to preserve the shapes of classes of objects, however, the current implementation may result in a more perturbed boundary for the preserved class. One potential direction of expanding this work is to find a way of keeping the boundary of the preserved class intact while also respect the skeletons of the neighboring objects. While adding the boundary is simple, re-computing the specific skeleton regions is a difficult task. As mentioned above, the current approach also doesn't perform well when there are multiple holes in a class of objects. This needs to be researched more.
