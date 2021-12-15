@@ -15,3 +15,7 @@
 ---
 
 ## [Please click here for the Project Update 2](https://sjvyas.github.io/csce645/update-2)
+
+---
+
+## [Please click here for the Final Report](https://sjvyas.github.io/csce645/final-report)
