@@ -71,6 +71,8 @@ The other challenges I faced was to set an appropriate threshold at which to sto
 
 ### Results
 
+![FR01_00](/assets/images/final_result_1.png)
+
 ### Analysis
 The proposed approach is 
 
